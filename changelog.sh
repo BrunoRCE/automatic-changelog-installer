@@ -4,12 +4,12 @@ echo "
 -- Welcome to automatic changelog installer --
 =============================================
 "
-echo "Enter the repository path: " 
+echo "Enter the repository URL: " 
 read repository 
 echo "\n---- Init node ----\n" 
 npm init -y
 echo "\n---- Download dependencies ----\n" 
-npm i -g husky standard-version npm-add-script commitizen cz-conventional-changelog @commitlint/{config-conventional,cli} 
+npm i --save-dev husky standard-version npm-add-script commitizen cz-conventional-changelog @commitlint/{config-conventional,cli} 
 npx husky install
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
 npx npmAddScript -k postinstall -v "husky install"
