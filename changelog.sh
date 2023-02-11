@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 =============================================
--- Welcome to umvel changelog installer --
+-- Welcome to automatic changelog installer --
 =============================================
 "
 echo "Enter the repository path: " 
